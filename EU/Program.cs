@@ -43,7 +43,7 @@ namespace EU
                     break;
                 }
             }
-            
+            Console.WriteLine($"7. feladat: Legutoljáta csatlakozott ország: {europa.OrderBy(x => x.datum).Last().orszag}");
         }
     }
 }
