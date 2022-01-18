@@ -18,6 +18,7 @@ namespace EU
                 europa.Add(new EU_list(i));
             }
             Console.WriteLine($"3. feladat: EU tagállamainak száma: {europa.Count} db");
+            
             int csat = 0;
             foreach (var i in europa)
             {
@@ -27,6 +28,13 @@ namespace EU
                 }
             }
             Console.WriteLine($"4. feladat: 2007-ben {csat} ország csatlakozott.");
+            foreach (var i in europa)
+            {
+                if (i.orszag == "Magyarország")
+                {
+                    Console.WriteLine($"5. feladat: Magyarország csatlakozásának dátuma: {i.datum.ToString("yyyy.MM.dd")}");
+                }
+            }
         }
     }
 }
