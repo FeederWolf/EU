@@ -12,7 +12,12 @@ namespace EU
     {
         static void Main(string[] args)
         {
-            
+            List<EU_list> europa = new List<EU_list>();
+            foreach (var i in File.ReadAllLines("EUcsatlakozas.txt"))
+            {
+                europa.Add(new EU_list(i));
+            }
+            Console.WriteLine($"3. feladat: EU tagállamainak száma: {europa.Count} db");
         }
     }
 }
