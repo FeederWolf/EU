@@ -35,6 +35,14 @@ namespace EU
                     Console.WriteLine($"5. feladat: Magyarország csatlakozásának dátuma: {i.datum.ToString("yyyy.MM.dd")}");
                 }
             }
+            foreach (var i in europa)
+            {
+                if (i.datum.Date.Month == 05)
+                {
+                    Console.WriteLine("6. feladat: Májusban volt csatlakozás!");
+                    break;
+                }
+            }
         }
     }
 }
