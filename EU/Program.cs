@@ -18,6 +18,15 @@ namespace EU
                 europa.Add(new EU_list(i));
             }
             Console.WriteLine($"3. feladat: EU tagállamainak száma: {europa.Count} db");
+            int csat = 0;
+            foreach (var i in europa)
+            {
+                if (i.datum.Date.Year == 2007)
+                {
+                    csat++;
+                }
+            }
+            Console.WriteLine($"4. feladat: 2007-ben {csat} ország csatlakozott.");
         }
     }
 }
