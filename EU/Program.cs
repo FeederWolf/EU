@@ -58,7 +58,7 @@ namespace EU
                     stat.Add(v.datum, 1);
                 }
             }
-            Console.WriteLine($"7. feladat: statisztika");
+            Console.WriteLine($"8. feladat: statisztika");
             foreach (var s in stat)
             {
                     Console.WriteLine($"\t{s.Key:yyyy} - {s.Value} fő");
