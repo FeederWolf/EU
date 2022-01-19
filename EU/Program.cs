@@ -44,6 +44,14 @@ namespace EU
                 }
             }
             Console.WriteLine($"7. feladat: Legutoljáta csatlakozott ország: {europa.OrderBy(x => x.datum).Last().orszag}");
+            Console.WriteLine("8. feladat: Statisztika");
+            europa
+                .GroupBy(x => x.datum.Date.Year)
+                .Select(g => new { ev = g.Key, db = g.Count() })
+                .Where(x => x.db > 1)
+                .ToList()
+                .ForEach(x => Console.WriteLine($"\t{x.ev} - {x.db} ország"));
+
         }
     }
 }
